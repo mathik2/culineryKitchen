@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <style>
+      header {
+        text-align: center;
+        padding: 1rem;
+        box-shadow: 4px 6px 4px 1px #888888;
+        margin-bottom: 2%;
+        font-size: 2rem;
+      }
+      .item1 {
+        grid-area: donut;
+      }
+      .item2 {
+        grid-area: pizza;
+      }
+      .item3 {
+        grid-area: fries;
+      }
+      .item4 {
+        grid-area: tikka;
+      }
+      .item5 {
+        grid-area: macroon;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-areas:
+          "pizza fries fries tikka tikka"
+          "pizza macroon macroon donut donut ";
+        grid-gap: 20px;
+      }
+
+      .grid-container > div {
+        text-align: center;
+
+        font-size: 30px;
+      }
+
+      #foodGalary {
+        margin: 2%;
+      }
+      #foodGalary p {
+        margin: 2%;
+        font-size: 1.3rem;
+      }
+      #pizza {
+        position: relative;
+      }
+      #pizzaDesc {
+        position: absolute;
+        bottom: 0;
+        background-color: rgba(160, 45, 241, 0.746);
+        width: 100%;
+        border: 1px solid rgb(137, 9, 241);
+
+        border-bottom-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+        height: 50%;
+      }
+
+      #doughNut,
+      #macroon,
+      #pannerTikka,
+      #frenchFries {
+        position: relative;
+        border: 1px solid rgb(252, 252, 252);
+        border-radius: 25px;
+      }
+      #doughNutDesc,
+      #macroonDesc,
+      #pannerTikkaDesc,
+      #frenchFriesDesc {
+        position: absolute;
+        bottom: 0;
+        background-color: rgba(241, 237, 243, 0.822);
+        width: 100%;
+        height: 50%;
+      }
+
+      #doughNutDesc,
+      #macroonDesc,
+      #pannerTikkaDesc,
+      #frenchFriesDesc {
+        border: 1px solid rgb(255, 253, 253);
+
+        border-bottom-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+      }
+      #foodGalary img {
+        border-radius: 25px;
+      }
+      #explore {
+        display: flex;
+      }
+      button {
+        padding: 10px;
+        border: 1px solid rgba(241, 237, 243, 0);
+        border-radius: 25px;
+        margin-left: 3%;
+        background-color: rgba(225, 219, 228, 0.15);
+      }
+      span {
+        margin-left: 40%;
+      }
+      #middleImagePart {
+        position: relative;
+        margin: 2%;
+      }
+      #contentFood {
+        display: flex;
+        position: absolute;
+        top: 30%;
+      }
+      #indianCuisine,
+      #americanCuisine,
+      #chineseCuisine {
+        background-color: white;
+        margin: 5px;
+        padding: 2%;
+        border: 1px solid white;
+        border-radius: 25px;
+      }
+
+      #indianCuisine,
+      #chineseCuisine {
+        background-color: rgba(255, 255, 255, 0.904);
+        height: 10rem;
+        margin-top: 2%;
+      }
+      #americanCuisine {
+        height: 15rem;
+      }
+      #Worker {
+        display: flex;
+        text-align: center;
+        margin-left: 6%;
+      }
+      #Worker img {
+        border-radius: 60%;
+      }
+      #Worker > div {
+        padding: 5%;
+        margin: 2%;
+        width: 300px;
+      }
+      #Worker > div:hover {
+        box-shadow: 2px 5px 2px 5px grey;
+      }
+
+      #footerContent {
+        position: relative;
+      }
+      #contentFoodDetails {
+        display: flex;
+        text-align: center;
+      }
+      #vegetables,
+      #wholeGrain,
+      #fruits,
+      #HealthyProtein {
+        width: 15rem;
+        margin: 5%;
+      }
+      #vegetables {
+        position: absolute;
+        top: 0;
+      }
+      #wholeGrain {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      #fruits {
+        position: absolute;
+        bottom: 0;
+      }
+      #HealthyProtein {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>Culinary kitchen</header>
+    <section id="foodGalary">
+      <div class="grid-container">
+        <div class="item2">
+          <div id="pizza">
+            <img
+              src="https://static.toiimg.com/thumb/51892394/10-best-mid-range-Italian-Pizzeria-in-Gurgaon.jpg?width=1200&height=900"
+              width="100%"
+              height="600"
+              alt="pizza image"
+            />
+            <div id="pizzaDesc">
+              <h2>pizza is a savory dish of italian origin</h2>
+              <br />
+              <p>Let get started</p>
+
+              <hr />
+              <div id="explore">
+                <button id="">Explore ></button>
+                <span><i class="material-icons">&#xe83a;</i>Rated </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item3">
+          <div id="frenchFries">
+            <img
+              src="https://kirbiecravings.com/wp-content/uploads/2019/09/easy-french-fries-1.jpg"
+              width="100%"
+              height="300"
+              alt="frenchFries image"
+            />
+            <div id="frenchFriesDesc">
+              <p>frenchFries is a italian origin</p>
+              <p>Let get started</p>
+
+              <hr />
+              <div id="explore">
+                <button id="">Explore ></button>
+                <span><i class="material-icons">&#xe83a;</i>Rated </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item4">
+          <div id="pannerTikka">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpuwoy6yzb5onDqIAyRXzLU2idZWWfc9sQjg&usqp=CAU"
+              width="100%"
+              height="300"
+              alt="pannerTikka image"
+            />
+            <div id="pannerTikkaDesc">
+              <p>pannerTikka is a spicy dish</p>
+              <p>Let get started</p>
+
+              <hr />
+              <button id="">Explore ></button>
+              <span><i class="material-icons">&#xe83a;</i>Rated </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="item5">
+          <div id="macroon">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuP83pNYALb39WtS67Ph_JBJ6xGivHKZb0DA&usqp=CAU"
+              width="100%"
+              height="300"
+              alt="macroon image"
+            />
+            <div id="macroonDesc">
+              <p>macroon is a sweet one</p>
+              <p>Let get started</p>
+
+              <hr />
+              <button id="">Explore ></button>
+              <span><i class="material-icons">&#xe83a;</i>Rated </span>
+            </div>
+          </div>
+        </div>
+        <div class="item1">
+          <div id="doughNut">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQTOtWa85PX7d8tYl3bZByMPg3Lt3ndXZB3g&usqp=CAU"
+              width="100%"
+              height="300"
+              alt="doughNut image"
+            />
+            <div id="doughNutDesc">
+              <p>doughNut is a sweet one</p>
+              <p>Let get started</p>
+
+              <hr />
+              <button id="">Explore ></button>
+              <span><i class="material-icons">&#xe83a;</i>Rated </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="middleImagePart">
+      <div id="middleSectionContent">
+        <img
+          src="https://www.freepik.com/blog/app/uploads/2018/02/raw-pasta-with-tomatoes-and-cheese-on-a-black-table-making-a-circle_1309-53.jpg"
+          alt="foodTableImage"
+          width="100%"
+        />
+        <div id="contentFood">
+          <div id="indianCuisine">
+            <h3>Indian cuisin</h3>
+            <p>
+              Indian cuisine consists of a variety of regional and traditional
+              cuisines native to the Indian subcontinent.
+            </p>
+          </div>
+          <div id="americanCuisine">
+            <h3>American cuisine</h3>
+            <p>
+              The most prominent regional cuisines in China are Anhui,
+              Cantonese, Fujian, Hunan, Jiangsu, Shandong, Szechuan, and
+              Zhejiang. <br />Cantonese cuisine is famous all over the world for
+              its distinctive style. ... Zhejiang cuisine also thrives on
+              seafood, but focuses more on soft, fresh flavours.
+            </p>
+          </div>
+          <div id="chineseCuisine">
+            <h3>chinese cuisine</h3>
+            <p>
+              The most prominent regional cuisines in China are Anhui,
+              Cantonese, Fujian, Hunan, Jiangsu, Shandong, Szechuan, and
+              Zhejiang
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="Worker">
+      <div>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5wKNeguzGBs7ZgPl18dtNzD9CWm7Zi3nxuQ&usqp=CAU"
+          width="150px"
+          height="150px"
+        />
+        <h3>Eileen johnson</h3>
+        <p>Executive chef,usa</p>
+      </div>
+      <div>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6kSGmOXGwzRNrmmjn6Bqhb2jwaPjhYLQV5g&usqp=CAU"
+          width="150px"
+          height="150px"
+        />
+        <h3>Eileen johnson</h3>
+        <p>Executive chef,usa</p>
+      </div>
+      <div>
+        <img
+          src="https://research.fb.com/wp-content/uploads/2016/11/peopleeric-anderson-7936_finalcrop.jpg?w=300"
+          width="150px"
+          height="150px"
+        />
+        <h3>Eileen johnson</h3>
+        <p>Executive chef,usa</p>
+      </div>
+    </section>
+    <footer>
+      <h2 style="text-align: center">FOOD GUIDE</h2>
+      <hr />
+      <div id="footerContent">
+        <img
+          src="https://heartstrokeprod.azureedge.net/-/media/images/articles/foodguideplatev2.ashx?rev=372b23652cd243f98bef2cca920a6fd4&bc=f7f7f7&w=1160&h=653&as=1&la=en&hash=32388F46CEA12E28FA9E7F05FE09110A"
+          width="100%"
+        />
+        <div id="contentFoodDetails">
+          <div id="vegetables">
+            <h3>vegetables</h3>
+            <p>
+              Vegetables are parts of plants that are consumed by humans or
+              other animals as food. The original meaning is still commonly used
+              and is applied to plants collectively to refer to all edible plant
+              matter, including the flowers, fruits, stems, leaves, roots, and
+              seeds.
+            </p>
+          </div>
+          <div id="wholeGrain">
+            <h3>whole Grain</h3>
+            <p>
+              A whole grain is a grain of any cereal and pseudocereal that
+              contains the endosperm, germ, and bran, in contrast to refined
+              grains, which retain only the endosperm. As part of a general
+              healthy diet, consumption of whole grains is associated with lower
+              risk of several diseases.
+            </p>
+          </div>
+          <div id="fruits">
+            <h3>Fruits</h3>
+            <p>
+              Fruits are a good source of vitamins and minerals, recognized for
+              their role in preventing vitamin C and vitamin A deficiencies.
+            </p>
+          </div>
+          <div id="HealthyProtein">
+            <h3>Healthy Protein</h3>
+            <p>
+              The importance of eating enough protein can not be overstated.
+              Here are 20 high protein foods that can help you lose weight, feel
+              great, and gain muscle.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
